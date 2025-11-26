@@ -1,0 +1,157 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#1976d2;
+  --surface:#0b1228;
+  --glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #08101a 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Contenedores principales */
+#menu{padding:12px 18px;background:transparent}
+#menu nav{display:flex;gap:10px;align-items:center}
+#app{padding:18px;max-width:1100px;margin:18px auto}
+
+/* Botones */
+button{cursor:pointer;border:0;border-radius:8px;padding:8px 12px;background:linear-gradient(180deg,var(--accent),#0f5fb4);color:#fff;font-weight:600}
+button[disabled]{opacity:.6;cursor:not-allowed}
+
+/* Inputs */
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"]{
+  background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px;border-radius:8px;color:inherit;outline:none;
+}
+input::placeholder{color:var(--muted)}
+
+/* Formularios */
+form#formularioRegistro{display:flex;flex-direction:column;gap:10px;max-width:480px}
+#btnRegistro{width:160px}
+
+/* API Results */
+#apiResultados{margin-top:8px}
+#apiResultados > div{background:var(--card);transition:transform .15s,box-shadow .15s;cursor:pointer}
+#apiResultados > div:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,0.4)}
+#apiResultados img{display:block}
+
+/* Mensajes y selección */
+#apiMensaje{color:var(--muted)}
+#apiSeleccion{margin-top:14px}
+
+/* Card details */
+h2{margin:0 0 12px}
+h3,h4{color:#eaf3ff}
+
+/* Menu buttons style reset (nav) */
+#menu button{background:transparent;color:#cfe6ff;padding:6px 10px;border-radius:6px;border:1px solid transparent}
+#menu button:hover{background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.04)}
+
+/* Small screens */
+@media (max-width:600px){
+  #app{padding:12px}
+  #apiResultados{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
